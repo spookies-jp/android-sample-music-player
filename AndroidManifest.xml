@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="jp.co.spookies.player" android:versionCode="1"
+	android:versionName="1.0">
+	<uses-sdk android:minSdkVersion="8" />
+
+	<application android:icon="@drawable/icon" android:label="@string/app_name">
+
+		<activity android:name=".MusicPlayerActivity"
+			android:label="@string/app_name"
+			android:screenOrientation="portrait"
+			android:launchMode="singleTop"
+			>
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".MusicListActivity"
+			android:label="@string/app_name"
+			android:screenOrientation="portrait"
+			>
+		</activity>
+
+		<receiver android:name=".MusicPlayerReceiver">
+			<intent-filter>
+				<action android:name="android.media.AUDIO_BECOMING_NOISY" />
+			</intent-filter>
+		</receiver>
+ 
+		<service android:enabled="true" android:name=".MusicPlayerService">
+			<intent-filter>
+				<action android:name="jp.co.spookies.player.IMusicPlayerService"></action>
+			</intent-filter>
+		</service>
+
+	</application>
+</manifest>

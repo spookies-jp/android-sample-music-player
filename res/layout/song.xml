@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+	<ImageView android:src="@drawable/icon_list" android:id="@+id/art_work"
+		android:layout_width="60dp" android:layout_height="60dp"
+		android:layout_marginRight="5dp" android:layout_marginLeft="5dp">
+	</ImageView>
+
+	<LinearLayout
+		android:layout_height="wrap_content" android:layout_width="wrap_content"
+		android:orientation="vertical" android:layout_weight="1">
+
+		<TextView android:id="@+id/title" 
+		  android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content"
+          android:textColor="#000000"
+		  android:textSize="16sp">
+		</TextView>
+
+		<TextView android:id="@+id/artist"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="left"
+            android:textColor="#000000"
+			android:textSize="12sp">
+		</TextView>
+
+		<TextView android:id="@+id/album"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="left"
+            android:textColor="#000000"
+			android:textSize="14sp">
+		</TextView>
+
+	</LinearLayout>
+
+</LinearLayout>
